@@ -4,7 +4,7 @@ AdvancedRAG AI is a production-style document intelligence platform built with P
 
 ## Screenshots
 
-![AdvancedRAG AI UI](docs/screenshot-placeholder.svg)
+![AdvancedRAG AI UI](docs/screenshot-latest.png)
 
 ## Architecture
 
