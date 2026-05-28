@@ -1,0 +1,72 @@
+2026-05-28 22:14:04,304 INFO [app.main] Starting AdvancedRAG AI backend
+INFO:     127.0.0.1:49240 - "GET /api/health HTTP/1.1" 200 OK
+2026-05-28 22:14:46,539 INFO [sentence_transformers.SentenceTransformer] Use pytorch device_name: cpu
+2026-05-28 22:14:46,541 INFO [sentence_transformers.SentenceTransformer] Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-05-28 22:14:53,560 INFO [chromadb.telemetry.product.posthog] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-05-28 22:14:55,161 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:14:55,173 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+INFO:     127.0.0.1:49241 - "POST /api/documents/upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49775 - "GET /api/documents HTTP/1.1" 200 OK
+2026-05-28 22:18:35,920 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:18:35,929 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+INFO:     127.0.0.1:49782 - "POST /api/documents/upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49788 - "OPTIONS /api/chat HTTP/1.1" 200 OK
+2026-05-28 22:18:51,156 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:18:51,161 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+INFO:     127.0.0.1:49788 - "POST /api/chat HTTP/1.1" 200 OK
+2026-05-28 22:18:54,011 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 22:18:54,078 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:18:54,088 WARNING [chromadb.segment.impl.vector.local_persistent_hnsw] Number of requested results 50 is greater than number of elements in index 8, updating n_results = 8
+2026-05-28 22:18:54,108 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:18:56,630 WARNING [huggingface_hub.file_download] Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-05-28 22:19:27,102 INFO [sentence_transformers.cross_encoder.CrossEncoder] Use pytorch device: cpu
+INFO:     127.0.0.1:49789 - "GET /api/observability/summary HTTP/1.1" 200 OK
+2026-05-28 22:19:33,575 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 22:19:34,133 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 22:19:36,776 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 22:19:47,898 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:19:47,904 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+INFO:     127.0.0.1:49816 - "POST /api/chat HTTP/1.1" 200 OK
+2026-05-28 22:19:49,728 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:     127.0.0.1:49818 - "OPTIONS /api/documents/doc_d64f1ff48ebf2815_30551fa0 HTTP/1.1" 200 OK
+2026-05-28 22:19:53,997 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:19:54,001 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:19:54,024 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event CollectionDeleteEvent: capture() takes 1 positional argument but 3 were given
+INFO:     127.0.0.1:49818 - "DELETE /api/documents/doc_d64f1ff48ebf2815_30551fa0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49818 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49818 - "OPTIONS /api/documents/doc_d64f1ff48ebf2815_0a8969cc HTTP/1.1" 200 OK
+2026-05-28 22:19:58,515 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:19:58,519 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:19:58,535 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event CollectionDeleteEvent: capture() takes 1 positional argument but 3 were given
+INFO:     127.0.0.1:49818 - "DELETE /api/documents/doc_d64f1ff48ebf2815_0a8969cc HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49818 - "OPTIONS /api/documents/doc_d64f1ff48ebf2815_0b8132c3 HTTP/1.1" 200 OK
+2026-05-28 22:19:59,474 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:19:59,477 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:19:59,496 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event CollectionDeleteEvent: capture() takes 1 positional argument but 3 were given
+INFO:     127.0.0.1:49818 - "DELETE /api/documents/doc_d64f1ff48ebf2815_0b8132c3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49836 - "GET /api/documents HTTP/1.1" 200 OK
+2026-05-28 22:20:28,899 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:20:28,903 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+INFO:     127.0.0.1:49844 - "POST /api/documents/upload HTTP/1.1" 200 OK
+2026-05-28 22:20:48,004 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:20:48,010 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+INFO:     127.0.0.1:49846 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49848 - "GET /api/observability/summary HTTP/1.1" 200 OK
+2026-05-28 22:20:51,177 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 22:20:51,223 WARNING [chromadb.segment.impl.vector.local_persistent_hnsw] Number of requested results 50 is greater than number of elements in index 4, updating n_results = 4
+INFO:     127.0.0.1:49853 - "GET /api/observability/summary HTTP/1.1" 200 OK
+2026-05-28 22:20:59,003 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 22:21:00,049 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 22:21:05,695 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:49945 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49995 - "GET /api/documents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49995 - "GET /api/documents HTTP/1.1" 200 OK
+2026-05-28 22:26:09,931 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-28 22:26:09,936 ERROR [chromadb.telemetry.product.posthog] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+INFO:     127.0.0.1:50069 - "POST /api/chat HTTP/1.1" 200 OK
+2026-05-28 22:26:13,240 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 22:26:13,323 WARNING [chromadb.segment.impl.vector.local_persistent_hnsw] Number of requested results 50 is greater than number of elements in index 4, updating n_results = 4
+2026-05-28 22:26:20,496 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 22:26:26,639 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-28 22:26:29,580 INFO [httpx] HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:50112 - "GET /api/observability/summary HTTP/1.1" 200 OK

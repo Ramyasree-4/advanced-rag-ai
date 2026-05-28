@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: advancedrag-ai-backend
+    env: docker
+    plan: starter
+    dockerfilePath: ./backend/Dockerfile
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: CHROMA_PERSIST_DIRECTORY
+        value: /app/storage/chroma
+      - key: UPLOAD_DIRECTORY
+        value: /app/storage/uploads
+      - key: MISTRAL_API_KEY
+        sync: false
+      - key: LANGSMITH_API_KEY
+        sync: false
