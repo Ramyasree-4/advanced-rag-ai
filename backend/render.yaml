@@ -17,5 +17,4 @@ services:
         sync: false
       - key: LANGSMITH_API_KEY
         sync: false
-      - key: ALLOWED_ORIGINS
-        value: '["https://advanced-rag-ai-2phf.vercel.app"]'
+
