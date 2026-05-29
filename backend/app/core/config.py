@@ -1,9 +1,11 @@
 from __future__ import annotations
 
+import json
 from functools import lru_cache
 from pathlib import Path
+from typing import Any
 
-from pydantic import Field
+from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -20,6 +22,19 @@ class Settings(BaseSettings):
             "http://127.0.0.1:3001",
         ]
     )
+
+    @field_validator("allowed_origins", mode="before")
+    @classmethod
+    def parse_allowed_origins(cls, v: Any) -> list[str]:
+        if isinstance(v, list):
+            return v
+        if isinstance(v, str):
+            v = v.strip()
+            if v.startswith("["):
+                return json.loads(v)
+            # comma-separated plain string
+            return [origin.strip() for origin in v.split(",") if origin.strip()]
+        return v
 
     mistral_api_key: str | None = None
     mistral_model: str = "mistral-large-latest"
