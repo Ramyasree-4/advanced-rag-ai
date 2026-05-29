@@ -99,6 +99,8 @@ export default function Home() {
     const nextSession = storedSession || createId();
     window.localStorage.setItem("advancedrag_session_id", nextSession);
     setSessionId(nextSession);
+    // Wake up the backend (Render free tier spins down on inactivity)
+    fetch(`${API_BASE}/health`).catch(() => {});
     refreshDocuments();
   }, []);
 
@@ -169,6 +171,8 @@ export default function Home() {
     const formData = new FormData();
     formData.append("file", file);
     try {
+      // First ping to wake up Render free tier if sleeping
+      await fetch(`${API_BASE}/health`).catch(() => {});
       const response = await fetch(`${API_BASE}/documents/upload`, { method: "POST", body: formData });
       if (!response.ok) throw new Error(await response.text());
       const doc = (await response.json()) as DocumentMetadata;
