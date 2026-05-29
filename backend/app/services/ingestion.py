@@ -75,12 +75,15 @@ class DocumentIngestionService:
             text = self.preprocessor.clean(doc.page_content)
             if not text:
                 continue
+            page_val = doc.metadata.get("page", index - 1)
             metadata = {
-                **doc.metadata,
                 "filename": filename,
                 "content_type": content_type,
-                "page": doc.metadata.get("page", index - 1) + 1 if isinstance(doc.metadata.get("page", index), int) else index,
+                "page": (page_val + 1) if isinstance(page_val, int) else index,
             }
+            # Only include source if present and not None
+            if doc.metadata.get("source"):
+                metadata["source"] = str(doc.metadata["source"])
             normalized.append(Document(page_content=text, metadata=metadata))
         return normalized
 

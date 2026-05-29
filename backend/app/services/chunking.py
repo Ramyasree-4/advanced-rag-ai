@@ -34,9 +34,11 @@ class AdaptiveChunker:
                         "chunk_profile": chunk_profile,
                         "adaptive_overlap": min(self.settings.chunk_overlap, chunk_size // 4),
                         "structure_aware": True,
-                        "section_title": chunk.metadata.get("section_title"),
+                        "section_title": chunk.metadata.get("section_title") or "",
                     }
                 )
+                # Remove any None values from metadata — ChromaDB rejects them
+                chunk.metadata = {k: v for k, v in chunk.metadata.items() if v is not None}
             chunks.extend(page_chunks)
         return chunks
 
