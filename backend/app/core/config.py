@@ -47,7 +47,7 @@ class Settings(BaseSettings):
     langsmith_api_key: str | None = None
     langsmith_project: str = "advancedrag-ai"
 
-    embedding_model_name: str = "BAAI/bge-small-en-v1.5"
+    embedding_model_name: str = "mistral-embed"
     cross_encoder_model_name: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
     chroma_persist_directory: Path = Path("./storage/chroma")
     upload_directory: Path = Path("./storage/uploads")
